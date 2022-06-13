@@ -20,6 +20,7 @@ const config = {
   },
   framework: 'vue3',
   mini: {
+    hot: true,
     webpackChain (chain) {
       chain.merge({
         module: {
