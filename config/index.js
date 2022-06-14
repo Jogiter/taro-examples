@@ -21,6 +21,9 @@ const config = {
   framework: 'vue3',
   mini: {
     hot: true,
+    optimizeMainPackage: {
+      enable: true,
+    },
     webpackChain (chain) {
       chain.merge({
         module: {
