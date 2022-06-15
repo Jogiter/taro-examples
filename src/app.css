@@ -1,3 +1,7 @@
 /* @tailwind base;
 @tailwind components;
 @tailwind utilities; */
+.a {
+  background: #000;
+  size: 16px;
+}

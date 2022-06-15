@@ -25,7 +25,9 @@
     "dev:rn": "npm run build:rn -- --watch",
     "dev:qq": "npm run build:qq -- --watch",
     "dev:quickapp": "npm run build:quickapp -- --watch",
-    "lint": "eslint --ext .js,.ts,.vue,.jsx,.tsx ."
+    "lint": "eslint --ext .js,.ts,.vue,.jsx,.tsx .",
+    "prepare": "husky install",
+    "stylelint": "stylelint **/*.css"
   },
   "browserslist": [
     "last 3 versions",
@@ -57,10 +59,19 @@
     "eslint-config-taro": "3.4.11",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-vue": "^8.0.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.1",
     "prettier": "^2.7.0",
-    "stylelint": "9.3.0",
+    "stylelint": "^14.9.1",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-standard": "^26.0.0",
     "tailwindcss": "^3.1.2",
     "typescript": "^4.7.3",
     "vue-loader": "^16.8.3"
+  },
+  "lint-staged": {
+    "**/*": "prettier --write",
+    "*.{js,ts,vue,jsx,tsx}": "eslint --cache --fix",
+    "*.css": "stylelint --fix"
   }
 }

@@ -8,10 +8,6 @@
 import './index.css'
 import Counter from '../../components/Counter.vue'
 
-interface Dm {
-  a: string
-}
-
 export default {
   name: 'Index',
   components: {
