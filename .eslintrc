@@ -1,27 +1,28 @@
 // ESLint 检查 .vue 文件需要单独配置编辑器：
 // https://eslint.vuejs.org/user-guide/#editor-integrations
 {
+  "env": {
+    "node": true
+  },
   "extends": [
-    "eslint:recommended",
     "taro/vue3",
+    "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
     "prettier"
   ],
+  "plugins": ["prettier"],
   "rules": {
-    // 禁止出现未使用过的变量
-    // "no-unused-vars": "off",
-    // 缩进风格
-    // "indent": ["error", 2],
-    // 是否应该在行尾使用分号
-    "semi": ["error", "never"],
-    // 强制使用一致的单引号
-    "quotes": ["error", "single"],
-    // // 最后一行
-    // "eol-last": 1,
-    // // 强制在 JSX 属性中一致地使用双引号或单引号
-    // "jsx-quotes": ["error", "prefer-single"],
-    // // 未重新赋值的变量使用 const 而不是 let
-    // "prefer-const": "warn"
+    "prettier/prettier": "error"
   },
+  "overrides": [
+    {
+      "files": ["*.vue"],
+      "parser": "vue-eslint-parser",
+      "parserOptions": {
+        "extraFileExtensions": [".vue"],
+        "parser": "@typescript-eslint/parser"
+      }
+    }
+  ]
 }
 
