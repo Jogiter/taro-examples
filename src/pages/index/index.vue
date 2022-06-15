@@ -4,14 +4,21 @@
   </view>
 </template>
 
-<script>
+<script lang="ts">
 import './index.css'
 import Counter from '../../components/Counter.vue'
+
+interface Dm {
+  a: string
+}
 
 export default {
   name: 'Index',
   components: {
-    Counter
-  }
+    Counter,
+  },
+  setup() {
+    console.log('asf')
+  },
 }
 </script>

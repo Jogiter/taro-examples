@@ -24,9 +24,9 @@ export default {
 
     return {
       counter,
-      onAdd
+      onAdd,
     }
-  }
+  },
 }
 </script>
 
