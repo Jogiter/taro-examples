@@ -27,7 +27,7 @@
     "dev:quickapp": "npm run build:quickapp -- --watch",
     "lint": "eslint --ext .js,.ts,.vue,.jsx,.tsx .",
     "prepare": "husky install",
-    "stylelint": "stylelint **/*.css",
+    "stylelint": "stylelint **/*.css **/*.vue",
     "commit": "git-cz"
   },
   "browserslist": [
@@ -65,9 +65,11 @@
     "git-cz": "^4.9.0",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.1",
+    "postcss-html": "^1.4.1",
     "prettier": "^2.7.0",
     "stylelint": "^14.9.1",
     "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-recommended-vue": "^1.4.0",
     "stylelint-config-standard": "^26.0.0",
     "tailwindcss": "^3.1.2",
     "typescript": "^4.7.3",
@@ -79,7 +81,7 @@
       "eslint --cache --fix",
       "git add"
     ],
-    "**/*.css": [
+    "**/*.{css,vue}": [
       "prettier --write",
       "stylelint --fix",
       "git add"

@@ -9,7 +9,7 @@ import './index.css'
 import Counter from '../../components/Counter.vue'
 
 export default {
-  name: 'Index',
+  name: 'IndexPage',
   components: {
     Counter,
   },
@@ -18,3 +18,16 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+.index1 {
+  background: #000;
+  size: 16px;
+  color: red;
+  border: 2px solid blue;
+
+  /* top: 3.2456341px; */
+
+  /* heigth: 100%; */
+}
+</style>
