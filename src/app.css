@@ -7,3 +7,27 @@
 
   /* width: 1.234567px; */
 }
+
+/* web开发中顶层变量的key名是:root，小程序使用page */
+page {
+  --blue: #1e90ff;
+  --white: #fff;
+}
+
+body {
+  background-color: var(--blue);
+}
+
+.container {
+  color: var(--blue);
+  background-color: var(--white);
+  padding: 15px;
+}
+
+.container button {
+  background-color: var(--white);
+  color: var(--blue);
+  border: 1px solid var(--blue);
+  padding: 5px;
+  font-weight: bold;
+}
